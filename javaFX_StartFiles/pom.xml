@@ -64,9 +64,11 @@
 				<version>3.4.2</version>
 				<configuration>
 					<archive>
+						<!-- if using packages, MUST update <mainClass> with the fully qualified name of the class containing -->
+						<!-- your main method (e.g., 'package.ClassName') -->
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>edu.vwcc.gui.App</mainClass>
+							<mainClass>App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
