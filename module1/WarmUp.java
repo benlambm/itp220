@@ -1,9 +1,18 @@
-package yourPackageNameHere;
+package yourPackageName; // please update
 
 public class WarmUp {
 
-    /**
-     * This method should return the largest number in an array of integers.
+	/**
+     * Problem #1: Implement a method that counts the number of 'r's in a String (CASE INSENTIVE)
+     */
+    public static int rCount(String str) {
+        // TODO: Implement this method
+        return 0;
+    }
+	
+	
+	/**
+     * Problem #2: Return the largest number in an array of integers.
      */
     public static int findLargest(int[] numbers) {
         // TODO: Implement this method
@@ -11,7 +20,7 @@ public class WarmUp {
     }
 
     /**
-     * This method should return a new string where all occurrences of 'a' are replaced with 'b'.
+     * Problem #3: Return a new string where all occurrences of 'a' are replaced with 'b' (CASE INSENTIVE)
      */
     public static String replaceChar(String str) {
         // TODO: Implement this method
@@ -19,21 +28,22 @@ public class WarmUp {
     }
 
     /**
+     * Problem #4: FizzBuzz
      * This method should implement the FizzBuzz game.
-     * For numbers 1 to n:
+     * For numbers 1 to 30:
      * - If the number is divisible by 3, return "Fizz"
      * - If the number is divisible by 5, return "Buzz"
      * - If the number is divisible by both 3 and 5, return "FizzBuzz"
      * - Otherwise, return the number as a string
-     * @param n the number to FizzBuzz up to
-     * @return an array of strings with the FizzBuzz results
+     * @return String with these FizzBuzz results
      */
-    public static String[] fizzBuzz(int n) {
+    public static String fizzBuzz(int n) {
         // TODO: Implement this method
-        return new String[n];
+        return "";
     }
 
     /**
+     * Problem #5
      * This method should calculate the Hamming distance between two strings.
      * The Hamming distance is the number of positions at which the corresponding
      * characters in two strings are different. For example, "ABC" and "ABX" should return 1
@@ -45,20 +55,39 @@ public class WarmUp {
         return 0;
     }
 
+    
+    
+    // RUN TESTS BY RUNNING MAIN METHOD - DON'T CHANGE ANYTHING IN MAIN METHOD THIS WEEK
     public static void main(String[] args) {
-        // Test findLargest
+        // Test #1: test rCount
+    	System.out.println("rCount of 'strawberry' should be 3: " + rCount("strawberry"));
+    	System.out.println("rCount of 'Roller coaster' should be 3: " + rCount("Roller coaster"));    	
+    	System.out.println("rCount of '' (empty string) should be 0: " + rCount(""));
+    	
+    	// Test #2 findLargest
         int[] numbers = {1, 5, 3, 7, 2};
         System.out.println("findLargest({1, 5, 3, 7, 2}) should be 7: " + findLargest(numbers));
+        
+        int[] numbers2 = {-16, -51, -1, -1234123};
+        System.out.println("findLargest({-16, -51, -1, -1234123}) should be -1: " + findLargest(numbers2));
+        
+        int[] number = {500};
+        System.out.println("findLargest({500}) should be 500: " + findLargest(number));
 
-        // Test replaceChar
+        // Test #3 replaceChar
         System.out.println("replaceChar('Java is awesome') should be 'Jbvb is bwesome': " + replaceChar("Java is awesome"));
+        
+        System.out.println("replaceChar('Grand Adventure') should be 'Grbnd Bdventure': " + replaceChar("Grand Adventure"));
 
-        // Test fizzBuzz
-        String[] fizzBuzzResult = fizzBuzz(15);
-        System.out.println("FizzBuzz up to 15:");
-        for (int i = 0; i < fizzBuzzResult.length; i++) {
-            System.out.println((i + 1) + ": " + fizzBuzzResult[i]);
-        }
+        // Test #4 fizzBuzz
+        System.out.println("fizzBuzz(3) should be 'Fizz': " + fizzBuzz(3));
+        System.out.println("fizzBuzz(5) should be 'Buzz': " + fizzBuzz(5));
+        System.out.println("fizzBuzz(15) should be 'FizzBuzz': " + fizzBuzz(15));
+        System.out.println("fizzBuzz(7) should be '7': " + fizzBuzz(7));
+        System.out.println("fizzBuzz(1) should be '1': " + fizzBuzz(1));
+        System.out.println("fizzBuzz(10) should be 'Buzz': " + fizzBuzz(10));
+        System.out.println("fizzBuzz(12) should be 'Fizz': " + fizzBuzz(12));
+        System.out.println("fizzBuzz(30) should be 'FizzBuzz': " + fizzBuzz(30));
 
         // Test hammingDistance
         try {
